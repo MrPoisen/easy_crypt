@@ -1,3 +1,2 @@
-cipher
-hash
+easy_crypt
 test

@@ -1,4 +1,4 @@
-# Project Description
+
 
 This is a simple library. You can use it to hash, encrypt and decrypt data. It allows easy use of the [pychryptodome](https://pypi.org/project/pycryptodome/) library.
 
