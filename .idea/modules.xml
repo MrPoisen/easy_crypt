@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../PythonProject/.idea/PythonProject.iml" filepath="$PROJECT_DIR$/../PythonProject/.idea/PythonProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/easy_crypt.iml" filepath="$PROJECT_DIR$/.idea/easy_crypt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../easy_crypt_doc/easy_crypt_documentation/.idea/easy_crypt_documentation.iml" filepath="$PROJECT_DIR$/../easy_crypt_doc/easy_crypt_documentation/.idea/easy_crypt_documentation.iml" />
     </modules>
   </component>
 </project>
