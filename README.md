@@ -24,4 +24,5 @@ to_compare = "Hello Hash"
 print(compare_hash(pw,hash)) # prints "True"; The output is a boolean
 ```
 
-You can use old ciphers too, like Vigener or Caesar.
+You can use old ciphers too, like Vigener or Caesar. More are being added.  
+For cryptographically secure encryption/decryption use `easy_crypt.cipher.cypher_funct`
