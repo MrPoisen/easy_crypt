@@ -2,7 +2,7 @@ from Crypto.Cipher import PKCS1_OAEP, Salsa20
 from Crypto.PublicKey import RSA
 from Crypto.Random import get_random_bytes
 
-from easy_crypt.Exceptions import *
+from easy_cryptography.Exceptions import *
 
 
 def gen_asym_keys(length=2048):

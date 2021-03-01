@@ -1,7 +1,7 @@
 import hashlib
 import os
 
-from easy_crypt.Exceptions import *
+from easy_cryptography.Exceptions import *
 
 
 def gen_hash(text, predefined_salt=None, hash_type='sha512', iterations=100000, data_type='hex'):

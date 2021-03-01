@@ -8,5 +8,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="PythonProject" />
     <orderEntry type="module" module-name="easy_crypt_documentation" />
+    <orderEntry type="module" module-name="advanced_types" />
   </component>
 </module>

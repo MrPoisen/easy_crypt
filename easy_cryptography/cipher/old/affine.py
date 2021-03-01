@@ -1,12 +1,31 @@
 import string
 
-
-def even(value):
-    r = value % 2
-    return r == 0
+from easy_cryptography.Exceptions import InvalidLetterError
 
 
-def encrypt(text:str, a:int, b:int, alphabet=None):
+def test_for_divisors(value, divisors):
+
+    for element in divisors:
+        result = value / element
+        if result == int(result):
+            return True
+        else:
+            pass
+    return False
+
+
+def get_divisor(alphabet):
+    divisors = []
+    for i in range(2, len(alphabet) - 1):  # checks for values
+        p = len(alphabet) / i
+        if p == int(p):  # Checks if it divides without rest
+           divisors.append(i)  # saves value
+        else:
+            pass
+    return divisors
+
+
+def encrypt(text:str, a:int, b:int, alphabet=None,remain = [" "]):
     '''
 
     :param text: the text that is supposed to be encrypted(type: **str**)
@@ -19,16 +38,18 @@ def encrypt(text:str, a:int, b:int, alphabet=None):
     if alphabet == None:  # Sets the alphabet to the standard alphabet if None is given
         alphabet = standard_alphabet
 
-    if even(len(alphabet)) and even(a):
-        raise ValueError("a must be a coprime")
+    for r in remain:
+        if r in alphabet:
+            raise InvalidLetterError(r,"Letter in remain can't be in the alphabet")
 
-    if even(len(alphabet)) == False and even(a) == False:
+    divisors = get_divisor(alphabet)
+    if test_for_divisors(a,divisors):
         raise ValueError("a must be a coprime")
 
     result = ""
 
     for char in text:
-        if char == " ":
+        if char in remain:
             result += char
         else:
             pos = alphabet.index(char)
@@ -39,7 +60,7 @@ def encrypt(text:str, a:int, b:int, alphabet=None):
     return result
 
 
-def decrypt(text:str, a:int, b:int, alphabet=None):
+def decrypt(text:str, a:int, b:int, alphabet=None,remain = [" "]):
     '''
 
     :param text: the text that is supposed to be decrypted(type: **str**)
@@ -52,19 +73,23 @@ def decrypt(text:str, a:int, b:int, alphabet=None):
     if alphabet == None:  # Sets the alphabet to the standard alphabet if None is given
         alphabet = standard_alphabet
 
-    if even(len(alphabet)) and even(a):
+    for r in remain:
+        if r in alphabet:
+            raise InvalidLetterError(r,"Letter in remain can't be in the alphabet")
+
+    divisors = get_divisor(alphabet)
+    if test_for_divisors(a, divisors):
         raise ValueError("a must be a coprime")
 
-    if even(len(alphabet)) == False and even(a) == False:
-        raise ValueError("a must be a coprime")
-
+    if a <= 0:
+        raise ValueError("a must be bigger than 0")
     result = ''
     a_inv = 0
     while (a * a_inv) % len(alphabet) != 1:
         a_inv += 1
 
     for char in text:
-        if char == " ":
+        if char in remain:
             result += char
         else:
             pos = alphabet.index(char)
