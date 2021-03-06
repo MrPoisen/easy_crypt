@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Gui/.idea/Gui.iml" filepath="$PROJECT_DIR$/../Gui/.idea/Gui.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PythonProject/.idea/PythonProject.iml" filepath="$PROJECT_DIR$/../PythonProject/.idea/PythonProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/../advanced_types/.idea/advanced_types.iml" filepath="$PROJECT_DIR$/../advanced_types/.idea/advanced_types.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/easy_crypt.iml" filepath="$PROJECT_DIR$/.idea/easy_crypt.iml" />

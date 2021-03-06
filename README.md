@@ -30,4 +30,5 @@ For cryptographically secure encryption/decryption use `easy_crypt.cipher.cypher
 
 I recommend to not use pyprind with this module for now. I will improve the use over time
 
-For more informations, [read the docs](https://easy-crypt.readthedocs.io/en/latest/)
+For more information, [read the docs](https://easy-crypt.readthedocs.io/en/latest/).  
+If you have any issues report them on [github](https://github.com/MrPoisen/easy_crypt).
